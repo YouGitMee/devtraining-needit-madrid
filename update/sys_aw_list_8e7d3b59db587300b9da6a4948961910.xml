@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_aw_list">
+    <sys_aw_list action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category display_value="Incidents">76c7f355db587300b9da6a4948961935</category>
+        <columns>number,opened_at,caller_id,short_description,priority,state,assignment_group,assigned_to,sys_updated_on,sys_updated_by,reopen_count,close_code</columns>
+        <condition table="incident">active=true^sys_created_on&lt;javascript:gs.beginningOfLast90Days()^incident_state!=6^EQ<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="false" field="sys_created_on" goto="false" newquery="false" operator="&lt;" or="false" value="javascript:gs.beginningOfLast90Days()"/>
+            <item endquery="false" field="incident_state" goto="false" newquery="false" operator="!=" or="false" value="6"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <groups/>
+        <order>60</order>
+        <roles>itil</roles>
+        <sys_class_name>sys_aw_list</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-03-19 16:44:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>8e7d3b59db587300b9da6a4948961910</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Inciednts over 90 days old</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_aw_list_8e7d3b59db587300b9da6a4948961910</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-03-19 16:44:06</sys_updated_on>
+        <table>incident</table>
+        <title>Inciednts over 90 days old</title>
+    </sys_aw_list>
+</record_update>
